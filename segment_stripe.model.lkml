@@ -1,4 +1,4 @@
-connection: "segment_sources"
+connection: "datalake"
 
 # include all the views
 include: "*.view"

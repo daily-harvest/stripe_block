@@ -2,7 +2,7 @@ view: calendar {
   derived_table: {
     sql_trigger_value: select current_date ;;
     indexes: ["cal_date"]
-    distribution_style: all
+    # distribution_style: all
     sql: SELECT
         DATEADD('days',
           (p0.n
