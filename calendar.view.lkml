@@ -4,7 +4,7 @@ view: calendar {
     indexes: ["cal_date"]
     # distribution_style: all
     sql: SELECT
-        DATEADD('days',
+
           (p0.n
           + p1.n*2
           + p2.n * POWER(2,2)
@@ -17,8 +17,8 @@ view: calendar {
           + p9.n * POWER(2,9)
           + p10.n * POWER(2,10)
           )::int
-          , '2012-11-01'::date
-          )
+          + '2012-11-01'::date
+
           as cal_date
         FROM
           (SELECT 0 as n UNION SELECT 1) p0,
@@ -33,7 +33,7 @@ view: calendar {
           (SELECT 0 as n UNION SELECT 1) p9,
           (SELECT 0 as n UNION SELECT 1) p10
         WHERE
-        DATEADD('days',
+
           (p0.n
           + p1.n*2
           + p2.n * POWER(2,2)
@@ -46,7 +46,7 @@ view: calendar {
           + p9.n * POWER(2,9)
           + p10.n * POWER(2,10)
           )::int
-          , '2012-11-01'::date
+          + '2012-11-01'::date
           ) <= current_date
        ;;
   }
