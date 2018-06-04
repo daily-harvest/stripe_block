@@ -47,7 +47,7 @@ view: calendar {
           + p10.n * POWER(2,10)
           )::int
           + '2012-11-01'::date
-          ) <= current_date
+           <= current_date
        ;;
   }
 
