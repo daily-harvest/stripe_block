@@ -1,5 +1,5 @@
 view: refunds {
-  sql_table_name: stripe.refunds ;;
+  sql_table_name: segment_stripe.refunds ;;
 
   dimension: id {
     primary_key: yes

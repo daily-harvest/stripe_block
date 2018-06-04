@@ -1,5 +1,5 @@
 view: customers {
-  sql_table_name: stripe.customers ;;
+  sql_table_name: segment_stripe.customers ;;
 
   dimension: id {
     primary_key: yes

@@ -1,5 +1,5 @@
 view: discounts {
-  sql_table_name: stripe.discounts ;;
+  sql_table_name: segment_stripe.discounts ;;
 
   dimension: id {
     primary_key: yes
