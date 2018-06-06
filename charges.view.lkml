@@ -81,7 +81,7 @@ view: charges {
   ## Measures
   dimension: days_until_received {
     type: number
-    sql: datediff('days',${created_date},${received_date}) ;;
+    sql: ${received_date} - ${created_date} ;;
   }
 
   measure: avg_days_until_received {
@@ -155,7 +155,7 @@ view: charges {
 
   measure: refund_count {
     type: count
-    drill_fields: [id, customers.id, invoices.id, invoices.count, refunds.count]
+    drill_fields: [id, customers.id, refunds.count]
 
     filters: {
       field: refunded
